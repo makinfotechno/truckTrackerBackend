@@ -27,7 +27,6 @@ const TruckSchema = new mongoose.Schema(
     truckNo: {
       type: String,
       required: true,
-      unique: true,
     },
     tripId: {
       type: String,
@@ -36,6 +35,7 @@ const TruckSchema = new mongoose.Schema(
     tripStatus: {
       type: String,
       required: true,
+      default:"Active",
       enum: ["Active", "Completed"],
     },
     status: {
